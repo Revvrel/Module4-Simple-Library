@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: maven:3.9.5-jdk-17
+      - image: cimg/openjdk:20.0.2
     steps:
       - checkout
       - run: mvn spring-boot:run
