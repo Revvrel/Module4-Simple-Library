@@ -9,7 +9,7 @@ jobs:
       - image: cimg/openjdk:20.0.2
     steps:
       - checkout
-      - run: mvn spring-boot:run
+      - run: mvn clean spring-boot:run
 
   publish:
     executor: docker/docker
