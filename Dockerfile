@@ -10,6 +10,6 @@ COPY src ./src
 
 RUN chmod +x mvnw
 
-RUN ./mvnw install -DskipTests
+RUN ./mvnw clean install -DskipTests
 
 CMD [ "./mvnw", "spring-boot:run" ]
