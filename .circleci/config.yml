@@ -6,14 +6,10 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:16.10
+      - image: maven:3.9.5-jdk-17
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
-      - run: |
-          echo "Installing  dependencies... "
-          npm install
+      - run: mvn spring-boot:run
 
   publish:
     executor: docker/docker
