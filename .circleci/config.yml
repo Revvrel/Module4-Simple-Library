@@ -2,9 +2,17 @@ version: 2.1
 
 orbs:
   docker: circleci/docker@2.1.4
+  heroku: circleci/heroku@2.0.0
 
 jobs:
   build:
+    docker:
+      - image: cimg/openjdk:20.0.2
+    steps:
+      - checkout
+      - run: mvn clean spring-boot:run
+
+  test:
     docker:
       - image: cimg/openjdk:20.0.2
     steps:
@@ -19,15 +27,18 @@ jobs:
       - docker/check
       - docker/build:
           image: revvrel/simple-library
-          tag: v1.0.1
+          tag: v1.0.0
       - docker/push:
           image: revvrel/simple-library
-          tag: v1.0.1
+          tag: v1.0.0
 
 workflows:
   simple_workflow:
     jobs:
       - build
-      - publish:
+      - test:
           requires:
             - build
+      - publish:
+          requires:
+            - test
