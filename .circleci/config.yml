@@ -43,17 +43,25 @@ jobs:
   deploy:
     docker:
       - image: cimg/openjdk:20.0.2
+      - image: cimg/postgres:12.17
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: simple-library
+          DATABASE_URL: postgresql://localhost:5432/simple-library
     steps:
       - setup_remote_docker
       - checkout
       - heroku/install
+      - run: 
+          name: Wait for db to run
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Heroku Container Push
           command: |
               heroku container:login
               heroku container:push web -a module4-simple-library
               heroku container:release web -a module4-simple-library
-
 
 workflows:
   simple_workflow:
