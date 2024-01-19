@@ -32,6 +32,21 @@ jobs:
           image: revvrel/simple-library
           tag: v1.0.0
 
+  deploy:
+    docker:
+      - image: cimg/openjdk:20.0.2
+    steps:
+      - setup_remote_docker
+      - checkout
+      - heroku/install
+      - run:
+          name: Heroku Container Push
+          command: |
+              heroku container:login
+              heroku container:push web -a module4-simple-library
+              heroku container:release web -a module4-simple-library
+
+
 workflows:
   simple_workflow:
     jobs:
@@ -42,3 +57,6 @@ workflows:
       - publish:
           requires:
             - test
+      -deploy:
+          requires:
+            - publish
