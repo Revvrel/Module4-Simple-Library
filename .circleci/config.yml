@@ -19,10 +19,10 @@ jobs:
       - docker/check
       - docker/build:
           image: revvrel/simple-library
-          tag: v1.0.0
+          tag: v1.0.1
       - docker/push:
           image: revvrel/simple-library
-          tag: v1.0.0
+          tag: v1.0.1
 
 workflows:
   simple_workflow:
