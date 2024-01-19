@@ -1,4 +1,4 @@
-package com.example.librarybookingsystem.controllers;
+package com.example.librarybookingsystem;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
