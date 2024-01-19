@@ -8,7 +8,7 @@ COPY mvnw pom.xml ./
 
 COPY src ./src
 
-RUN chmod +x mvn
+# RUN chmod +x mvnw
 
 RUN echo "unset MAVEN_CONFIG" >> /root/.bashrc
 
