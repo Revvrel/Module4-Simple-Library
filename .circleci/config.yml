@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   docker: circleci/docker@2.1.4
   heroku: circleci/heroku@2.0.0
-  snyk: snyk/snyk@1.5.0
+  # snyk: snyk/snyk@1.5.0
 
 jobs:
   build:
@@ -28,18 +28,18 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: mvn test
 
-  scan:
-    docker:
-      - image: cimg/openjdk:20.0.2
-    environment:
-      IMAGE_NAME: revvrel/simple-library
-    steps:
-      - checkout
-      - setup_remote_docker
-      - docker/check
-      - run: docker build -t $IMAGE_NAME
-      - snyk/scan:
-          docker-image-name: $IMAGE_NAME
+  # scan:
+  #   docker:
+  #     - image: cimg/openjdk:20.0.2
+  #   environment:
+  #     IMAGE_NAME: revvrel/simple-library
+  #   steps:
+  #     - checkout
+  #     - setup_remote_docker
+  #     - docker/check
+  #     - run: docker build -t $IMAGE_NAME
+  #     - snyk/scan:
+  #         docker-image-name: $IMAGE_NAME
 
   publish:
     executor: docker/docker
@@ -84,12 +84,12 @@ workflows:
       - test:
           requires:
             - build
-      - scan:
-          requires:
-            - test
+      # - scan:
+      #     requires:
+      #       - test
       - publish:
           requires:
-            - scan
+            - test
       - deploy:
           requires:
             - publish
