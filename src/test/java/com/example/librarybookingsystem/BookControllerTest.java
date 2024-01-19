@@ -40,7 +40,7 @@ public class BookControllerTest {
         public void getBookByIdTest() throws Exception {
 
                 // Step 1: Build a GET request to /books/{id}
-                RequestBuilder request = MockMvcRequestBuilders.get("http://localhost:8080/books/1")
+                RequestBuilder request = MockMvcRequestBuilders.get("http://localhost:8080/book/1")
                                 .header("Authorization",
                                                 "Basic " + java.util.Base64.getEncoder()
                                                                 .encodeToString("user:password".getBytes()));
@@ -78,7 +78,7 @@ public class BookControllerTest {
                 String newBookAsJSON = objectMapper.writeValueAsString(newBook);
 
                 // Step 3: Build the request
-                RequestBuilder request = MockMvcRequestBuilders.post("http://localhost:8080/books/")
+                RequestBuilder request = MockMvcRequestBuilders.post("http://localhost:8080/book/")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(newBookAsJSON).header("Authorization",
                                                 "Basic " + java.util.Base64.getEncoder()
@@ -105,14 +105,14 @@ public class BookControllerTest {
                 // Step 1: Update an existing Book object
                 Book updateBook = Book.builder().title("Rich Dad Poor Dad")
                                 .author("Robert Kiyosaki")
-                                .genre("Personal Finance").quantity(7).availability(true).build();
+                                .genre("Personal Finance").quantity(2).availability(true).build();
 
                 // Step 2: Convert the Java object to JSON using ObjectMapper
                 String updateBookAsJSON = objectMapper.writeValueAsString(updateBook);
 
                 // Step 3: Build the request
                 // Assuming ID 4 is for the "UPDATE"              
-                RequestBuilder request = MockMvcRequestBuilders.put("http://localhost:8080/books/3") 
+                RequestBuilder request = MockMvcRequestBuilders.put("http://localhost:8080/book/3") 
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(updateBookAsJSON).header("Authorization",
                                                 "Basic " + java.util.Base64.getEncoder()
@@ -126,7 +126,7 @@ public class BookControllerTest {
                 .andExpect(jsonPath("$.title").value("Rich Dad Poor Dad"))
                 .andExpect(jsonPath("$.author").value("Robert Kiyosaki"))
                 .andExpect(jsonPath("$.genre").value("Personal Finance"))
-                .andExpect(jsonPath("$.quantity").value(7))
+                .andExpect(jsonPath("$.quantity").value(2))
                 .andExpect(jsonPath("$.availability").value(true));
         }
        
@@ -135,7 +135,7 @@ public class BookControllerTest {
         public void validBookDeleteTest() throws Exception {
         // Step 1: Build the request for the delete
         RequestBuilder request =
-        MockMvcRequestBuilders.delete("http://localhost:8080/books/3")
+        MockMvcRequestBuilders.delete("http://localhost:8080/book/3")
         .header("Authorization",
         "Basic " +
         java.util.Base64.getEncoder().encodeToString("user:password".getBytes()));
@@ -158,7 +158,7 @@ public class BookControllerTest {
 
         // Step 3: Build the request
         RequestBuilder request =
-        MockMvcRequestBuilders.post("http://localhost:8080/books/")
+        MockMvcRequestBuilders.post("http://localhost:8080/book/")
         .contentType(MediaType.APPLICATION_JSON)
         .content(invalidBookAsJSON).header("Authorization",
         "Basic " +
