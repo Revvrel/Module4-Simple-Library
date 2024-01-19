@@ -15,8 +15,16 @@ jobs:
   test:
     docker:
       - image: cimg/openjdk:20.0.2
+      - image: cimg/postgres:12.17
+          environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: simple-library
     steps:
       - checkout
+      - run: 
+          name: Wait for db to run
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: mvn test
 
   publish:
