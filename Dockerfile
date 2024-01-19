@@ -8,10 +8,10 @@ COPY mvnw pom.xml ./
 
 COPY src ./src
 
-RUN chmod +x mvnw
+RUN chmod +x mvn
 
 RUN echo "unset MAVEN_CONFIG" >> /root/.bashrc
 
-RUN ./mvnw clean install -DskipTests
+RUN ./mvn clean install -DskipTests
 
-CMD [ "./mvnw", "spring-boot:run" ]
+CMD [ "./mvn", "spring-boot:run" ]
