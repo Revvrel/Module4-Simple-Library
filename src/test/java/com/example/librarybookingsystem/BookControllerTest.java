@@ -56,7 +56,7 @@ public class BookControllerTest {
                                 .andExpect(jsonPath("$.title").value("The Fellowship of the Ring"))
                                 .andExpect(jsonPath("$.author").value("J. R. R. Tolkien"))
                                 .andExpect(jsonPath("$.genre").value("Fantasy"))
-                                .andExpect(jsonPath("$.quantity").value(2))
+                                .andExpect(jsonPath("$.quantity").value(1))
                                 .andExpect(jsonPath("$.availability").value(true));
         }
 
