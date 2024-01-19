@@ -30,7 +30,7 @@ public class LoanPeriodControllerTest {
     public void getAllloanStatusTest() throws Exception {
 
         // Step 1: Build a GET request to /learners/{id}
-        RequestBuilder request = MockMvcRequestBuilders.get("http://localhost:8080/loanStatus/")
+        RequestBuilder request = MockMvcRequestBuilders.get("http://localhost:8080/loans/")
                 .header("Authorization",
                         "Basic " + java.util.Base64.getEncoder().encodeToString("user:password".getBytes()));
 
@@ -49,7 +49,7 @@ public class LoanPeriodControllerTest {
         // Step 1: Build a GET request to /learners/{id}
         final int learner_id = 1;
         final int book_id = 1;
-        RequestBuilder request = MockMvcRequestBuilders.post("http://localhost:8080/loanStatus/borrow/"+learner_id+"/"+book_id)
+        RequestBuilder request = MockMvcRequestBuilders.post("http://localhost:8080/loans/"+learner_id+"/"+book_id)
                 .header("Authorization",
                         "Basic " + java.util.Base64.getEncoder().encodeToString("user:password".getBytes()));
 

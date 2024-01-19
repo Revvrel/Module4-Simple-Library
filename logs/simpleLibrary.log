@@ -1,159 +1,154 @@
-2024-01-19T23:13:09.781+08:00  INFO 6064 --- [main] c.e.l.BookControllerTest                 : Starting BookControllerTest using Java 17.0.8 with PID 6064 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
-2024-01-19T23:13:09.803+08:00  INFO 6064 --- [main] c.e.l.BookControllerTest                 : The following 1 profile is active: "dev"
-2024-01-19T23:13:15.721+08:00  INFO 6064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-19T23:13:16.382+08:00  INFO 6064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 579 ms. Found 3 JPA repository interfaces.
-2024-01-19T23:13:20.325+08:00  INFO 6064 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-19T23:13:20.998+08:00  INFO 6064 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-19T23:13:21.303+08:00  INFO 6064 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-19T23:13:23.372+08:00  INFO 6064 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-19T23:13:23.568+08:00  INFO 6064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-19T23:13:24.453+08:00  INFO 6064 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@350342e0
-2024-01-19T23:13:24.472+08:00  INFO 6064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-19T23:13:24.804+08:00  WARN 6064 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-19T23:13:31.767+08:00  INFO 6064 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-19T23:13:31.922+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:13:31.923+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:13:31.924+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:13:31.924+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:13:31.926+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:13:31.926+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
-2024-01-19T23:13:31.928+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:13:31.928+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
-2024-01-19T23:13:31.931+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:13:31.931+08:00  WARN 6064 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
-2024-01-19T23:13:32.041+08:00  INFO 6064 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:13:37.006+08:00  WARN 6064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-19T23:13:40.235+08:00  INFO 6064 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-01-19T23:13:40.932+08:00  INFO 6064 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5629e904, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d7914a5, org.springframework.security.web.context.SecurityContextHolderFilter@33224703, org.springframework.security.web.header.HeaderWriterFilter@77227b1f, org.springframework.web.filter.CorsFilter@40fd25c7, org.springframework.security.web.authentication.logout.LogoutFilter@bce93d3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a8ae302, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7475f57e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3020f22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18ce7872, org.springframework.security.web.access.ExceptionTranslationFilter@15eaa2ce, org.springframework.security.web.access.intercept.AuthorizationFilter@28f663de]
-2024-01-19T23:13:43.722+08:00  INFO 6064 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-01-19T23:13:43.723+08:00  INFO 6064 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-01-19T23:13:43.725+08:00  INFO 6064 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-01-19T23:13:43.952+08:00  INFO 6064 --- [main] c.e.l.BookControllerTest                 : Started BookControllerTest in 35.54 seconds (process running for 38.881)
-2024-01-19T23:13:49.157+08:00  INFO 6064 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:13:49.181+08:00  INFO 6064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-01-19T23:13:49.197+08:00  INFO 6064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-01-19T23:18:01.745+08:00  INFO 8187 --- [main] c.e.l.BookControllerTest                 : Starting BookControllerTest using Java 17.0.8 with PID 8187 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
-2024-01-19T23:18:01.747+08:00  INFO 8187 --- [main] c.e.l.BookControllerTest                 : The following 1 profile is active: "dev"
-2024-01-19T23:18:07.058+08:00  INFO 8187 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-19T23:18:07.614+08:00  INFO 8187 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 511 ms. Found 3 JPA repository interfaces.
-2024-01-19T23:18:12.224+08:00  INFO 8187 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-19T23:18:12.955+08:00  INFO 8187 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-19T23:18:13.286+08:00  INFO 8187 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-19T23:18:15.219+08:00  INFO 8187 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-19T23:18:15.447+08:00  INFO 8187 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-19T23:18:16.310+08:00  INFO 8187 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57fce8b
-2024-01-19T23:18:16.330+08:00  INFO 8187 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-19T23:18:16.625+08:00  WARN 8187 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-19T23:18:25.435+08:00  INFO 8187 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-19T23:18:25.601+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:18:25.601+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:18:25.603+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:18:25.604+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:18:25.605+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:18:25.606+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
-2024-01-19T23:18:25.607+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:18:25.608+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
-2024-01-19T23:18:25.610+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:18:25.610+08:00  WARN 8187 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
-2024-01-19T23:18:25.688+08:00  INFO 8187 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:18:31.482+08:00  WARN 8187 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-19T23:18:35.760+08:00  INFO 8187 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-01-19T23:18:36.279+08:00  INFO 8187 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d7914a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40fd25c7, org.springframework.security.web.context.SecurityContextHolderFilter@5915ab69, org.springframework.security.web.header.HeaderWriterFilter@73136174, org.springframework.web.filter.CorsFilter@18ce7872, org.springframework.security.web.authentication.logout.LogoutFilter@1a6ab328, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@65134e6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@514f2b5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a40e660, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@136c3a6, org.springframework.security.web.access.ExceptionTranslationFilter@1d0fae45, org.springframework.security.web.access.intercept.AuthorizationFilter@7a3c541e]
-2024-01-19T23:18:39.209+08:00  INFO 8187 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-01-19T23:18:39.210+08:00  INFO 8187 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-01-19T23:18:39.212+08:00  INFO 8187 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-01-19T23:18:39.416+08:00  INFO 8187 --- [main] c.e.l.BookControllerTest                 : Started BookControllerTest in 38.805 seconds (process running for 41.908)
-2024-01-19T23:18:43.280+08:00  INFO 8187 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:18:43.310+08:00  INFO 8187 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-01-19T23:18:43.324+08:00  INFO 8187 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-01-19T23:19:01.621+08:00  INFO 8679 --- [main] c.e.l.BookControllerTest                 : Starting BookControllerTest using Java 17.0.8 with PID 8679 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
-2024-01-19T23:19:01.627+08:00  INFO 8679 --- [main] c.e.l.BookControllerTest                 : The following 1 profile is active: "dev"
-2024-01-19T23:19:09.404+08:00  INFO 8679 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-19T23:19:10.149+08:00  INFO 8679 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 691 ms. Found 3 JPA repository interfaces.
-2024-01-19T23:19:14.835+08:00  INFO 8679 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-19T23:19:15.730+08:00  INFO 8679 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-19T23:19:16.105+08:00  INFO 8679 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-19T23:19:18.569+08:00  INFO 8679 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-19T23:19:18.849+08:00  INFO 8679 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-19T23:19:19.877+08:00  INFO 8679 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77204651
-2024-01-19T23:19:19.898+08:00  INFO 8679 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-19T23:19:20.252+08:00  WARN 8679 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-19T23:19:28.727+08:00  INFO 8679 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-19T23:19:28.900+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:19:28.900+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:19:28.902+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:19:28.903+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:19:28.905+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:19:28.906+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
-2024-01-19T23:19:28.907+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:19:28.908+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
-2024-01-19T23:19:28.909+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:19:28.910+08:00  WARN 8679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
-2024-01-19T23:19:28.989+08:00  INFO 8679 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:19:34.401+08:00  WARN 8679 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-19T23:19:38.172+08:00  INFO 8679 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-01-19T23:19:38.747+08:00  INFO 8679 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e18a6a7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@505e483f, org.springframework.security.web.context.SecurityContextHolderFilter@33224703, org.springframework.security.web.header.HeaderWriterFilter@77227b1f, org.springframework.web.filter.CorsFilter@f81bd2c, org.springframework.security.web.authentication.logout.LogoutFilter@4e24db00, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5629e904, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7475f57e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3020f22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fedfff1, org.springframework.security.web.access.ExceptionTranslationFilter@15eaa2ce, org.springframework.security.web.access.intercept.AuthorizationFilter@2ca8bd50]
-2024-01-19T23:19:42.404+08:00  INFO 8679 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-01-19T23:19:42.405+08:00  INFO 8679 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-01-19T23:19:42.407+08:00  INFO 8679 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-01-19T23:19:42.571+08:00  INFO 8679 --- [main] c.e.l.BookControllerTest                 : Started BookControllerTest in 43.399 seconds (process running for 47.113)
-2024-01-19T23:19:47.373+08:00  INFO 8679 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:19:47.397+08:00  INFO 8679 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-01-19T23:19:47.409+08:00  INFO 8679 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-01-19T23:28:20.625+08:00  INFO 12814 --- [main] c.e.l.BookControllerTest                 : Starting BookControllerTest using Java 17.0.8 with PID 12814 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
-2024-01-19T23:28:20.627+08:00  INFO 12814 --- [main] c.e.l.BookControllerTest                 : The following 1 profile is active: "dev"
-2024-01-19T23:28:25.170+08:00  INFO 12814 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-19T23:28:25.687+08:00  INFO 12814 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 477 ms. Found 3 JPA repository interfaces.
-2024-01-19T23:28:28.456+08:00  INFO 12814 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-19T23:28:28.892+08:00  INFO 12814 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-19T23:28:29.113+08:00  INFO 12814 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-19T23:28:30.356+08:00  INFO 12814 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-19T23:28:30.503+08:00  INFO 12814 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-19T23:28:31.099+08:00  INFO 12814 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36511772
-2024-01-19T23:28:31.112+08:00  INFO 12814 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-19T23:28:31.253+08:00  WARN 12814 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-19T23:28:35.646+08:00  INFO 12814 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-19T23:28:35.838+08:00  INFO 12814 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:28:38.969+08:00  WARN 12814 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-19T23:28:41.283+08:00  INFO 12814 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-01-19T23:28:41.593+08:00  INFO 12814 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ceac22d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@598f065f, org.springframework.security.web.context.SecurityContextHolderFilter@1e82b631, org.springframework.security.web.header.HeaderWriterFilter@22277482, org.springframework.web.filter.CorsFilter@21f48f6c, org.springframework.security.web.authentication.logout.LogoutFilter@1626612d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3e3b41cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17179a7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6980e66a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16745ba7, org.springframework.security.web.access.ExceptionTranslationFilter@4a467f08, org.springframework.security.web.access.intercept.AuthorizationFilter@3dc976da]
-2024-01-19T23:28:43.618+08:00  INFO 12814 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-01-19T23:28:43.619+08:00  INFO 12814 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-01-19T23:28:43.624+08:00  INFO 12814 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2024-01-19T23:28:43.776+08:00  INFO 12814 --- [main] c.e.l.BookControllerTest                 : Started BookControllerTest in 24.035 seconds (process running for 26.282)
-2024-01-19T23:28:47.142+08:00  INFO 12814 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librarybookingsystem.LibrarybookingsystemApplicationTests]: LibrarybookingsystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-01-19T23:28:47.149+08:00  INFO 12814 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librarybookingsystem.LibrarybookingsystemApplication for test class com.example.librarybookingsystem.LibrarybookingsystemApplicationTests
-2024-01-19T23:28:47.166+08:00  INFO 12814 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2024-01-19T23:28:47.315+08:00  INFO 12814 --- [main] e.l.LibrarybookingsystemApplicationTests : Starting LibrarybookingsystemApplicationTests using Java 17.0.8 with PID 12814 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
-2024-01-19T23:28:47.316+08:00  INFO 12814 --- [main] e.l.LibrarybookingsystemApplicationTests : The following 1 profile is active: "dev"
-2024-01-19T23:28:49.073+08:00  INFO 12814 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-19T23:28:49.445+08:00  INFO 12814 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 371 ms. Found 3 JPA repository interfaces.
-2024-01-19T23:28:49.905+08:00  INFO 12814 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-19T23:28:49.961+08:00  INFO 12814 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-19T23:28:50.055+08:00  INFO 12814 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-19T23:28:50.072+08:00  INFO 12814 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-01-19T23:28:50.095+08:00  INFO 12814 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@27153ba2
-2024-01-19T23:28:50.096+08:00  INFO 12814 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-01-19T23:28:50.102+08:00  WARN 12814 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-01-19T23:28:50.382+08:00  INFO 12814 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-19T23:28:50.438+08:00  INFO 12814 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:28:51.466+08:00  WARN 12814 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-19T23:28:52.414+08:00  INFO 12814 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2024-01-19T23:28:52.580+08:00  INFO 12814 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d2887e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c8a2bec, org.springframework.security.web.context.SecurityContextHolderFilter@6317f6d, org.springframework.security.web.header.HeaderWriterFilter@27b94ed9, org.springframework.web.filter.CorsFilter@140db646, org.springframework.security.web.authentication.logout.LogoutFilter@12e035a8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a5bccb8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30f51f8a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b5860fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e5d611f, org.springframework.security.web.access.ExceptionTranslationFilter@3f5298a5, org.springframework.security.web.access.intercept.AuthorizationFilter@22c62ede]
-2024-01-19T23:28:53.757+08:00  INFO 12814 --- [main] e.l.LibrarybookingsystemApplicationTests : Started LibrarybookingsystemApplicationTests in 6.591 seconds (process running for 36.263)
-2024-01-19T23:28:53.882+08:00  INFO 12814 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:28:53.903+08:00  INFO 12814 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-01-19T23:28:53.917+08:00  INFO 12814 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-01-19T23:28:53.922+08:00  INFO 12814 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-01-19T23:28:53.928+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:28:53.929+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:28:53.930+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:28:53.931+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
-2024-01-19T23:28:53.932+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:28:53.933+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
-2024-01-19T23:28:53.935+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:28:53.936+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
-2024-01-19T23:28:53.937+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2024-01-19T23:28:53.938+08:00  WARN 12814 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
-2024-01-19T23:28:53.939+08:00  INFO 12814 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-01-19T23:28:53.952+08:00  INFO 12814 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-01-20T00:00:00.455+08:00  WARN 27290 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20T00:00:03.939+08:00  INFO 27290 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-01-20T00:00:04.274+08:00  INFO 27290 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8ae7e03, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@551bc2c6, org.springframework.security.web.context.SecurityContextHolderFilter@34c3e307, org.springframework.security.web.header.HeaderWriterFilter@17287458, org.springframework.web.filter.CorsFilter@6b6b4177, org.springframework.security.web.authentication.logout.LogoutFilter@2d73aa17, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62243a7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318d69ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b75b7b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bf32f3f, org.springframework.security.web.access.ExceptionTranslationFilter@578cd644, org.springframework.security.web.access.intercept.AuthorizationFilter@31b2c451]
+2024-01-20T00:00:06.365+08:00  INFO 27290 --- [main] e.l.LibrarybookingsystemApplicationTests : Started LibrarybookingsystemApplicationTests in 27.599 seconds (process running for 30.345)
+2024-01-20T00:00:07.862+08:00  INFO 27290 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librarybookingsystem.LoanPeriodControllerTest]: LoanPeriodControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20T00:00:07.885+08:00  INFO 27290 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librarybookingsystem.LibrarybookingsystemApplication for test class com.example.librarybookingsystem.LoanPeriodControllerTest
+2024-01-20T00:00:07.904+08:00  INFO 27290 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-01-20T00:00:08.094+08:00  INFO 27290 --- [main] c.e.l.LoanPeriodControllerTest           : Starting LoanPeriodControllerTest using Java 17.0.8 with PID 27290 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
+2024-01-20T00:00:08.095+08:00  INFO 27290 --- [main] c.e.l.LoanPeriodControllerTest           : The following 1 profile is active: "dev"
+2024-01-20T00:00:10.009+08:00  INFO 27290 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20T00:00:10.429+08:00  INFO 27290 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 418 ms. Found 3 JPA repository interfaces.
+2024-01-20T00:00:10.827+08:00  INFO 27290 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20T00:00:10.872+08:00  INFO 27290 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-20T00:00:10.946+08:00  INFO 27290 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-20T00:00:10.958+08:00  INFO 27290 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-01-20T00:00:10.981+08:00  INFO 27290 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1f96db42
+2024-01-20T00:00:10.982+08:00  INFO 27290 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-01-20T00:00:10.987+08:00  WARN 27290 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-20T00:00:11.232+08:00  INFO 27290 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-20T00:00:11.285+08:00  INFO 27290 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:00:12.439+08:00  WARN 27290 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20T00:00:13.861+08:00  INFO 27290 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-01-20T00:00:14.042+08:00  INFO 27290 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40fc181d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@413069a0, org.springframework.security.web.context.SecurityContextHolderFilter@726cda5b, org.springframework.security.web.header.HeaderWriterFilter@6965f207, org.springframework.web.filter.CorsFilter@19db3c2e, org.springframework.security.web.authentication.logout.LogoutFilter@3b5b6df4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d3f7e4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ee3a026, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@639ea347, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@180f49c5, org.springframework.security.web.access.ExceptionTranslationFilter@6b07c4c8, org.springframework.security.web.access.intercept.AuthorizationFilter@33dc36d5]
+2024-01-20T00:00:15.562+08:00  INFO 27290 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-01-20T00:00:15.563+08:00  INFO 27290 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-01-20T00:00:15.565+08:00  INFO 27290 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-01-20T00:00:15.653+08:00  INFO 27290 --- [main] c.e.l.LoanPeriodControllerTest           : Started LoanPeriodControllerTest in 7.749 seconds (process running for 39.633)
+2024-01-20T00:00:17.177+08:00  INFO 27290 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:00:17.202+08:00  INFO 27290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-20T00:00:17.225+08:00  INFO 27290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-20T00:00:17.232+08:00  INFO 27290 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:00:17.234+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:00:17.235+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:00:17.236+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:00:17.236+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:00:17.237+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:00:17.241+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
+2024-01-20T00:00:17.243+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:00:17.244+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
+2024-01-20T00:00:17.245+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:00:17.246+08:00  WARN 27290 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
+2024-01-20T00:00:17.246+08:00  INFO 27290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-01-20T00:00:17.259+08:00  INFO 27290 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-01-20T00:00:54.320+08:00  INFO 28156 --- [main] c.e.l.BookControllerTest                 : Starting BookControllerTest using Java 17.0.8 with PID 28156 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
+2024-01-20T00:00:54.323+08:00  INFO 28156 --- [main] c.e.l.BookControllerTest                 : The following 1 profile is active: "dev"
+2024-01-20T00:01:00.107+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20T00:01:01.003+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 856 ms. Found 3 JPA repository interfaces.
+2024-01-20T00:01:03.982+08:00  INFO 28156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20T00:01:04.325+08:00  INFO 28156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-20T00:01:04.561+08:00  INFO 28156 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-20T00:01:05.931+08:00  INFO 28156 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-20T00:01:06.066+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-20T00:01:06.671+08:00  INFO 28156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@197d5a87
+2024-01-20T00:01:06.686+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-20T00:01:06.875+08:00  WARN 28156 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-20T00:01:11.295+08:00  INFO 28156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-20T00:01:11.386+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:11.391+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:11.393+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:11.393+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:11.394+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:11.395+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
+2024-01-20T00:01:11.396+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:11.396+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
+2024-01-20T00:01:11.397+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:11.397+08:00  WARN 28156 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
+2024-01-20T00:01:11.465+08:00  INFO 28156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:14.675+08:00  WARN 28156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20T00:01:17.477+08:00  INFO 28156 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-01-20T00:01:17.908+08:00  INFO 28156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2408ca4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f7e2481, org.springframework.security.web.context.SecurityContextHolderFilter@15311af2, org.springframework.security.web.header.HeaderWriterFilter@16d7f503, org.springframework.web.filter.CorsFilter@5f745970, org.springframework.security.web.authentication.logout.LogoutFilter@14bb16ee, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4c1f4817, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34c21c34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65402e26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57cd77e1, org.springframework.security.web.access.ExceptionTranslationFilter@10cb1b89, org.springframework.security.web.access.intercept.AuthorizationFilter@2787abe4]
+2024-01-20T00:01:19.960+08:00  INFO 28156 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-01-20T00:01:19.960+08:00  INFO 28156 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-01-20T00:01:19.962+08:00  INFO 28156 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-01-20T00:01:20.092+08:00  INFO 28156 --- [main] c.e.l.BookControllerTest                 : Started BookControllerTest in 27.315 seconds (process running for 32.585)
+2024-01-20T00:01:23.519+08:00  INFO 28156 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librarybookingsystem.LearnerControllerTest]: LearnerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20T00:01:23.534+08:00  INFO 28156 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librarybookingsystem.LibrarybookingsystemApplication for test class com.example.librarybookingsystem.LearnerControllerTest
+2024-01-20T00:01:23.549+08:00  INFO 28156 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-01-20T00:01:23.759+08:00  INFO 28156 --- [main] c.e.l.LearnerControllerTest              : Starting LearnerControllerTest using Java 17.0.8 with PID 28156 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
+2024-01-20T00:01:23.759+08:00  INFO 28156 --- [main] c.e.l.LearnerControllerTest              : The following 1 profile is active: "dev"
+2024-01-20T00:01:25.762+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20T00:01:26.100+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 336 ms. Found 3 JPA repository interfaces.
+2024-01-20T00:01:26.821+08:00  INFO 28156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-01-20T00:01:26.853+08:00  INFO 28156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-20T00:01:26.854+08:00  INFO 28156 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-20T00:01:27.009+08:00  INFO 28156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-20T00:01:27.010+08:00  INFO 28156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3238 ms
+2024-01-20T00:01:27.648+08:00  INFO 28156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20T00:01:27.690+08:00  INFO 28156 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-20T00:01:27.767+08:00  INFO 28156 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-20T00:01:27.778+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-01-20T00:01:27.795+08:00  INFO 28156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@6dc6608c
+2024-01-20T00:01:27.796+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-01-20T00:01:27.801+08:00  WARN 28156 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-20T00:01:28.034+08:00  INFO 28156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-20T00:01:28.091+08:00  INFO 28156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:29.048+08:00  WARN 28156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20T00:01:29.912+08:00  INFO 28156 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-01-20T00:01:30.090+08:00  INFO 28156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2cfe5f7c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@88edd90, org.springframework.security.web.context.SecurityContextHolderFilter@5960fd98, org.springframework.security.web.header.HeaderWriterFilter@3cc135a9, org.springframework.web.filter.CorsFilter@cd68b88, org.springframework.security.web.authentication.logout.LogoutFilter@579347a7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79ec9d81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2465e8be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7edad7d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79ee7d2e, org.springframework.security.web.access.ExceptionTranslationFilter@352ad7fe, org.springframework.security.web.access.intercept.AuthorizationFilter@22cdc378]
+2024-01-20T00:01:31.076+08:00  INFO 28156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2024-01-20T00:01:31.076+08:00  INFO 28156 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-01-20T00:01:31.078+08:00  INFO 28156 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-01-20T00:01:31.280+08:00  INFO 28156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43507 (http) with context path ''
+2024-01-20T00:01:31.289+08:00  INFO 28156 --- [main] c.e.l.LearnerControllerTest              : Started LearnerControllerTest in 7.74 seconds (process running for 43.782)
+2024-01-20T00:01:31.977+08:00  INFO 28156 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librarybookingsystem.LibrarybookingsystemApplicationTests]: LibrarybookingsystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20T00:01:31.991+08:00  INFO 28156 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librarybookingsystem.LibrarybookingsystemApplication for test class com.example.librarybookingsystem.LibrarybookingsystemApplicationTests
+2024-01-20T00:01:32.016+08:00  INFO 28156 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-01-20T00:01:32.157+08:00  INFO 28156 --- [main] e.l.LibrarybookingsystemApplicationTests : Starting LibrarybookingsystemApplicationTests using Java 17.0.8 with PID 28156 (started by revvrel in /mnt/c/sctp/module-4/project/Module4-Simple-Library)
+2024-01-20T00:01:32.158+08:00  INFO 28156 --- [main] e.l.LibrarybookingsystemApplicationTests : The following 1 profile is active: "dev"
+2024-01-20T00:01:34.483+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20T00:01:34.782+08:00  INFO 28156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 297 ms. Found 3 JPA repository interfaces.
+2024-01-20T00:01:35.186+08:00  INFO 28156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20T00:01:35.242+08:00  INFO 28156 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-20T00:01:35.349+08:00  INFO 28156 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-20T00:01:35.363+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-01-20T00:01:35.382+08:00  INFO 28156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@69bdb27c
+2024-01-20T00:01:35.384+08:00  INFO 28156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-01-20T00:01:35.391+08:00  WARN 28156 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-20T00:01:35.648+08:00  INFO 28156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-20T00:01:35.720+08:00  INFO 28156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:37.008+08:00  WARN 28156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20T00:01:37.901+08:00  INFO 28156 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-01-20T00:01:38.018+08:00  INFO 28156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@668d6dc7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3871f21b, org.springframework.security.web.context.SecurityContextHolderFilter@66fa0be5, org.springframework.security.web.header.HeaderWriterFilter@3982d73d, org.springframework.web.filter.CorsFilter@65876774, org.springframework.security.web.authentication.logout.LogoutFilter@7d2b2f3a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@68263c3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38ec1c34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@509b760e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11ef3bee, org.springframework.security.web.access.ExceptionTranslationFilter@50e1c39c, org.springframework.security.web.access.intercept.AuthorizationFilter@761bac58]
+2024-01-20T00:01:39.389+08:00  INFO 28156 --- [main] e.l.LibrarybookingsystemApplicationTests : Started LibrarybookingsystemApplicationTests in 7.374 seconds (process running for 51.882)
+2024-01-20T00:01:39.439+08:00  INFO 28156 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librarybookingsystem.LoanPeriodControllerTest]: LoanPeriodControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20T00:01:39.448+08:00  INFO 28156 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librarybookingsystem.LibrarybookingsystemApplication for test class com.example.librarybookingsystem.LoanPeriodControllerTest
+2024-01-20T00:01:39.819+08:00  INFO 28156 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:39.838+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-20T00:01:39.853+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-20T00:01:39.870+08:00  INFO 28156 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:39.872+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.873+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:39.873+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.874+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:39.875+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.876+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
+2024-01-20T00:01:39.877+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.877+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
+2024-01-20T00:01:39.878+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.878+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
+2024-01-20T00:01:39.879+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-01-20T00:01:39.893+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-01-20T00:01:39.907+08:00  INFO 28156 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20T00:01:39.908+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.909+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:39.910+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.910+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "loan_period" does not exist, skipping
+2024-01-20T00:01:39.911+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.912+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "book" does not exist, skipping
+2024-01-20T00:01:39.913+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.913+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "learner" does not exist, skipping
+2024-01-20T00:01:39.914+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-01-20T00:01:39.914+08:00  WARN 28156 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "loan_period" does not exist, skipping
+2024-01-20T00:01:39.915+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-01-20T00:01:39.929+08:00  INFO 28156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

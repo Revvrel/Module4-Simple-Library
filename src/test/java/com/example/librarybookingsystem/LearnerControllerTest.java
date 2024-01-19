@@ -49,7 +49,7 @@ public class LearnerControllerTest {
                 .andExpect(jsonPath("$.firstName").value("John"))
                 .andExpect(jsonPath("$.lastName").value("Wick"))
                 .andExpect(jsonPath("$.email").value("johnwick@continental.com"))
-                .andExpect(jsonPath("$.contact_num").value("12345678"));
+                .andExpect(jsonPath("$.contact_num").value("99102134"));
     }
 
 
