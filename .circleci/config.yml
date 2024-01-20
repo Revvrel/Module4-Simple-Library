@@ -41,7 +41,7 @@ jobs:
           command: docker build -t $IMAGE_NAME:latest .
       - snyk/scan:
           docker-image-name: $IMAGE_NAME:latest
-          severity-threshold: high
+          severity-threshold: low
 
   publish:
     executor: docker/docker
