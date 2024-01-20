@@ -41,7 +41,7 @@ jobs:
   #         command: docker build -t $IMAGE_NAME:latest .
   #     - snyk/scan:
   #         docker-image-name: $IMAGE_NAME:latest
-  #         severity-threshold: critical
+  #         severity-threshold: low
 
   publish:
     executor: docker/docker
@@ -70,8 +70,8 @@ jobs:
       - checkout
       - heroku/install
       - run: 
-          name: Wait for db to run
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
+          no_output_timeout: 1m
       - run:
           name: Heroku Container Push
           command: |
