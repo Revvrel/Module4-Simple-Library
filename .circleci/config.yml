@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   docker: circleci/docker@2.1.4
   heroku: circleci/heroku@2.0.0
-  # snyk: snyk/snyk@1.5.0
+  snyk: snyk/snyk@1.5.0
 
 jobs:
   build:
@@ -28,18 +28,20 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: mvn test
 
-  # scan:
-  #   docker:
-  #     - image: cimg/openjdk:20.0.2
-  #   environment:
-  #     IMAGE_NAME: revvrel/simple-library
-  #   steps:
-  #     - checkout
-  #     - setup_remote_docker
-  #     - docker/check
-  #     - run: docker build -t $IMAGE_NAME
-  #     - snyk/scan:
-  #         docker-image-name: $IMAGE_NAME
+  scan:
+    docker:
+      - image: cimg/openjdk:20.0.2
+    environment:
+      IMAGE_NAME: revvrel/simple-library
+    steps:
+      - checkout
+      - setup_remote_docker
+      - docker/check
+      - run: 
+          command: docker build -t $IMAGE_NAME:latest
+      - snyk/scan:
+          docker-image-name: $IMAGE_NAME:latest
+          severity-threshold: high
 
   publish:
     executor: docker/docker
@@ -63,15 +65,13 @@ jobs:
           POSTGRES_PASSWORD: password
           POSTGRES_DB: simple-library
           DATABASE_URL: postgresql://localhost:5432/simple-library
-        volumes:
-          - ./postgres-data:/var/lib/postgresql/data
     steps:
       - setup_remote_docker
       - checkout
       - heroku/install
-      - run: 
-          name: Wait for db to run
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      # - run: 
+      #     name: Wait for db to run
+      #     command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Heroku Container Push
           command: |
@@ -86,12 +86,12 @@ workflows:
       - test:
           requires:
             - build
-      # - scan:
-      #     requires:
-      #       - test
-      - publish:
+      - scan:
           requires:
             - test
+      - publish:
+          requires:
+            - scan
       - deploy:
           requires:
             - publish
