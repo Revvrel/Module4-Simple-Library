@@ -69,9 +69,9 @@ jobs:
       - setup_remote_docker
       - checkout
       - heroku/install
-      # - run: 
-      #     name: Wait for db to run
-      #     command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run: 
+          name: Wait for db to run
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Heroku Container Push
           command: |
