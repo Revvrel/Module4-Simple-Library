@@ -38,7 +38,7 @@ jobs:
       - setup_remote_docker
       - docker/check
       - run: 
-          command: docker build -t $IMAGE_NAME:latest
+          command: image build -t $IMAGE_NAME:latest
       - snyk/scan:
           docker-image-name: $IMAGE_NAME:latest
           severity-threshold: high
