@@ -11,7 +11,7 @@ jobs:
       - image: cimg/openjdk:20.0.2
     steps:
       - checkout
-      - run: mvn clean spring-boot:run
+      - run: mvn package
 
   test:
     docker:
